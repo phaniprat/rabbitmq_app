@@ -18,6 +18,7 @@ async function sendMessage(msg) {
         console.error('Failed to send message', error);
     }
 }
+
 async function sendMessages() {
     const messages = [
         "First Message from NodeJs",
@@ -32,7 +33,7 @@ async function sendMessages() {
     }
 }
 
-sendMessages();
+
 
 
 async function consumeMessage() {
@@ -53,4 +54,9 @@ async function consumeMessage() {
     }
 }
 
-consumeMessage();
+async function homeFun(){
+    await sendMessages();
+    await consumeMessage();
+}
+
+homeFun();
